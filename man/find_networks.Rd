@@ -2,17 +2,20 @@
 % Please edit documentation in R/citybikes.R
 \name{find_networks}
 \alias{find_networks}
-\title{Find bike-sharing networks in a city}
+\title{Searches the CityBikes API for bike-sharing networks
+available in the specified city or country.}
 \usage{
-find_networks(city)
+find_networks(city = NULL, country = NULL)
 }
 \arguments{
 \item{city}{The name of the city to search for.}
+
+\item{country}{The name of the country to search for.}
 }
 \value{
 A data frame containing matching bike-sharing networks.
 }
 \description{
 Searches the CityBikes API for bike-sharing networks
-available in the specified city.
+available in the specified city or country.
 }
