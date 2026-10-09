@@ -31,7 +31,7 @@ remotes::install_github("marya117/citybikes")
 library(citybikes)
 
 # Search for bike-sharing networks
-networks <- find_networks("Stockholm")
+networks <- find_networks(city = "Stockholm")
 
 # Get stations for a network (here: Divvy in Chicago)
 stations <- get_stations("divvy")
