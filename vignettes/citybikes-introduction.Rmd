@@ -1,0 +1,61 @@
+---
+title: "citybikes-introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{citybikes-introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(citybikes)
+```
+
+# Introduction
+
+`citybikesR` is an R package that connects to the CityBikes API
+to retrieve information about bike-sharing networks and their stations.
+
+The package allows users to search for bike-sharing networks by city
+or country and retrieve information about the stations in a selected
+network, including the number of currently available bikes.
+
+## Finding bike-sharing networks
+
+The `find_networks()` function can be used to search for
+bike-sharing networks by city or country.
+
+For example, we can search for networks in Göteborg:
+
+```{r}
+find_networks(city = "Göteborg")
+```
+## Getting station information
+
+Once we have identified a bike-sharing network, we can use
+`get_stations()` to retrieve information about its stations.
+
+For example, we can retrieve the stations for a selected network:
+
+```{r}
+stations <- get_stations("e-cargobike-goteborg")
+stations
+```
+
+The returned data contains information such as the station name,
+location, number of available bikes, and number of available spaces.
+
+## Summary
+
+The `citybikesR` package provides a simple way to access
+bike-sharing information through the CityBikes API.
+
+The main functions allow users to find bike-sharing networks
+and retrieve current information about their stations.
