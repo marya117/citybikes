@@ -1,7 +1,7 @@
 Package: citybikes
 Type: Package
 Title: Access CityBikes Bike Sharing Data
-Version: 0.1.0
+Version: 1.0.0
 Authors@R: c(
     person(
       "Sheethal", "Lakshmana",
